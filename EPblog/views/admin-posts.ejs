@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | EPblog</title>
+    <!-- <link rel="stylesheet" href="../css files/admin.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://t5910.w3spaces.com/EPblog/admin-posts.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <h1>
+        <a href="/">EPblog</a>
+        <h1 style="color: #cfee9e">
+          <a href="/admin/posts"><i>ADMIN</i></a>
+        </h1>
+      </h1>
+      <ul>
+        <li><a href="/admin/posts">Posts</a></li>
+
+        <li><a href="/admin/change-password">Change Password</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <br />
+      <a
+        class="create-button"
+        href="/admin/create-post"
+        style="text-decoration: none"
+        ><b>+</b> Create New Post</a
+      >
+      <div class="post-container">
+        <!-- <div class="post">
+          <div class="txt">
+            <h3>Test Post</h3>
+            <br />
+            <a href="/edit/">Edit</a>
+          </div>
+          <p>
+            Short Description of post. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Incidunt porro in facilis temporibus commodi ea
+            aspernatur, ut unde odit rem necessitatibus modi tempore illo
+            perspiciatis nemo error perferendis iusto voluptatem.
+          </p>
+          <br />
+        </div> -->
+        <% posts.forEach(function(post) { %>
+          <div class="post">
+            <div class="txt">
+              <h3><%= post.title %></h3>
+              <br />
+              <a href="/admin/update-post/<%= post._id %>">Edit</a>
+            </div>
+            <p>
+              <%= post.content?.length > 100 ? post.content.substring(0, 100) + "..." : post.content %>
+            </p>
+            <br />
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>
