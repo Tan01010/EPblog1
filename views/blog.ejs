@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | EPblog</title>
-    <link rel="stylesheet" href="https://t5910.w3spaces.com/EPblog/gpt.css">
-    <link rel="stylesheet" href="https://t5910.w3spaces.com/EPblog/blog.css">
-    <link rel="stylesheet" href="https://t5910.w3spaces.com/EPblog/all.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
@@ -15,8 +13,7 @@
         </h1>
         <ul>
             <li><a href="/">Home</a></li>
-            
-            <li><a href="/blog" style="background-color: #3d7a00;">Blog</a></li>
+            <li><a href="/blog" class="active">Blog</a></li>
         </ul>
     </nav>
     <div class="container">
@@ -31,9 +28,9 @@
             <% }) %>
         </div>
     </div>
-    <footer style="text-align: center; background-color: rgb(47, 116, 141); padding: 1rem; color: white;">
+    <footer>
         <h3>Copyright EPblog &copy; All Rights Reserved</h3><br>
-        <a href="/admin/login" style="color: white;">Admin</a>
+        <a href="/admin/login">Admin</a>
     </footer>
 </body>
 </html>

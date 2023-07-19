@@ -1,55 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Update Post | Admin | EPblog</title>
-    <link
-      rel="stylesheet"
-      href="https://t5910.w3spaces.com/EPblog/create-post.css"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <nav>
-      <h1>
-        <a href="/">EPblog</a>
-        <h1 style="color: #cfee9e">
-          <a href="/admin/posts"><i>ADMIN</i></a>
+        <h1>
+            <a href="/">EPblog</a>
         </h1>
-      </h1>
-      <ul>
-        <li><a href="/admin/posts">Posts</a></li>
-
-        <li><a href="/admin/change-password">Change Password</a></li>
-      </ul>
+        <h1 style="color: #cfee9e">
+            <a href="/admin/posts"><i>ADMIN</i></a>
+        </h1>
+        <ul>
+            <li><a href="/admin/posts">Posts</a></li>
+            <li><a href="/admin/change-password">Change Password</a></li>
+        </ul>
     </nav>
     <div class="main-content">
-      <form action="/admin/update-post/<%= id %>" method="post">
-        <div style="display: flex">
-          <input
-            type="text"
-            placeholder="Title..."
-            class="title"
-            name="title"
-            value="<%= title %>"
-            style="margin-bottom: 1rem;"
-          /><br />
-          <a href="/admin/delete/<%= id %>" style="margin: 0.5rem; background-color: red; margin-bottom: 1rem;padding: 1rem; height: 100%; text-decoration: none; color: white;border-radius: 10px;">Delete</a>
-        </div>
-        <textarea
-          name="content"
-          id=""
-          cols="30"
-          rows="10"
-          placeholder="Body Content..."
-        >
-<%= content %></textarea
-        ><br />
-        <button type="submit" class="btn">Update</button>
-      </form>
+        <form action="/admin/update-post/<%= id %>" method="post">
+            <div class="input-container">
+                <input type="text" placeholder="Title..." class="title" name="title" value="<%= title %>">
+                <a href="/admin/delete/<%= id %>" class="delete-link">Delete</a>
+            </div>
+            <textarea name="content" cols="30" rows="10" placeholder="Body Content..."><%= content %></textarea>
+            <button type="submit" class="btn">Update</button>
+        </form>
     </div>
-  </body>
+</body>
 </html>
