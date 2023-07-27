@@ -21,8 +21,8 @@
         </ul>
     </nav>
     <div class="main-content">
-        <a href="/admin/delete/<%= id %>" class="delete">Delete</a>
         <form action="/admin/update-post/<%= id %>" method="post">
+            <a href="/admin/delete/<%= id %>" class="delete">Delete</a>
             <div class="input-container">
                 <input type="text" placeholder="Title..." class="title" name="title" value="<%= title %>">
             </div>
