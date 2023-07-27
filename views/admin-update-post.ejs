@@ -22,9 +22,9 @@
     </nav>
     <div class="main-content">
         <form action="/admin/update-post/<%= id %>" method="post">
-            <a href="/admin/delete/<%= id %>" class="delete">Delete</a>
             <div class="input-container">
                 <input type="text" placeholder="Title..." class="title" name="title" value="<%= title %>">
+<a href="/admin/delete/<%= id %>" class="delete">Delete</a>
             </div>
             <textarea name="content" cols="30" rows="10" placeholder="Body Content..."><%= content %></textarea>
             <button type="submit" class="btn">Update</button>
