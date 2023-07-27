@@ -24,7 +24,7 @@
         <form action="/admin/update-post/<%= id %>" method="post">
             <div class="input-container">
                 <input type="text" placeholder="Title..." class="title" name="title" value="<%= title %>">
-                <a href="/admin/delete/<%= id %>" class="delete-link">Delete</a>
+                <a href="/admin/delete/<%= id %>" class="delete">Delete</a>
             </div>
             <textarea name="content" cols="30" rows="10" placeholder="Body Content..."><%= content %></textarea>
             <button type="submit" class="btn">Update</button>
